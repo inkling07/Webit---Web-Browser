@@ -9,6 +9,41 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <CommandBar Background="Transparent" IsOpen="False" DefaultLabelPosition="Right" OverflowButtonVisibility="Auto">
+            <CommandBar.Content>
+                <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+                    <TextBox x:Name="textboxsearch" Margin="186,0,120,0" VerticalAlignment="Center" HorizontalAlignment="Stretch" />
+                    <AppBarButton Icon="Refresh" HorizontalAlignment="Left" Height="36" Margin="111,0,0,0" VerticalAlignment="Top" Width="48"/>
+                    <AppBarButton Icon="Forward" HorizontalAlignment="Left" Height="36" Margin="63,0,0,0" VerticalAlignment="Top" Width="48" Click="forwardwebview"/>
+                    <AppBarButton Icon="Back" HorizontalAlignment="Left" Height="36" Margin="10,0,0,0" VerticalAlignment="Top" Width="48" Click="backwebview"/>
+                    <AppBarButton Icon="Globe" HorizontalAlignment="Left" Height="36" Margin="1399,4,0,0" VerticalAlignment="Top" Width="49" Click="serarch"/>
+                    <ProgressRing x:Name="progressweb"  HorizontalAlignment="Left" Height="36" Margin="1350,4,0,0" VerticalAlignment="Top" Width="49" />
+
+                </Grid>
+
+
+            </CommandBar.Content>
+            <CommandBar.PrimaryCommands>
+
+            </CommandBar.PrimaryCommands>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Icon="Setting"/>
+            </CommandBar.SecondaryCommands>
+
+
+
+
+
+
+
+
+        </CommandBar>
+        <WebView x:Name="webview" Margin="0,45,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ContentLoading="loading" NavigationCompleted="finish" />
+        <TextBlock x:Name="texturl"   Margin="1621,53,-276,907" FontSize="24" Visibility="Collapsed"/>
+
+
+
+
 
     </Grid>
 </Page>

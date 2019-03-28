@@ -25,6 +25,42 @@ namespace Webit
         public MainPage()
         {
             this.InitializeComponent();
+            
+        }
+        
+
+        private void serarch(object sender, RoutedEventArgs e)
+        {
+
+            texturl.Text = "http://" + textboxsearch.Text;
+            webview.Navigate(new Uri(texturl.Text));
+            
+
+
+            //--</ load website >--
+        }
+
+        private void backwebview(object sender, RoutedEventArgs e)
+        {
+            webview.GoBack();
+        }
+
+        private void forwardwebview(object sender, RoutedEventArgs e)
+        {
+            webview.GoForward();
+        }
+
+        private void loading(WebView sender, WebViewContentLoadingEventArgs args)
+        {
+            progressweb.IsActive = true;
+        }
+
+        private void finish(WebView sender, WebViewNavigationCompletedEventArgs args)
+        {
+            progressweb.IsActive = false;
         }
     }
-}
+
+        
+    }
+
